@@ -1,4 +1,4 @@
-package ch2;
+package ch3;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class HelloServlet
+ * Servlet implementation class RequestTestServlet
  */
-@WebServlet("/HelloServlet")
-public class HelloServlet extends HttpServlet {
+@WebServlet("/RequestTestServlet")
+public class RequestTestServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public HelloServlet() {
+    public RequestTestServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,23 +28,25 @@ public class HelloServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("EUC-KR");
-		response.setContentType("text/html;charset=EUC-KR");
+		String method = request.getMethod();
+		String query = request.getQueryString();
+		String uri = request.getRequestURI();
+		String url = request.getRequestURL().toString();
+		
 		PrintWriter out = response.getWriter();
-		out.print("<html>");
-		out.print("<head>");
-		out.print("<title>helloworld servlet</title>");
-		out.print("</head>");
-		out.print("<body>");
-		out.print("<h1>HelloWorld</h1>");
-		out.print("</body>");
-		out.print("</html>");
+		out.println("<h1>Request Test</h1>");
+		out.println("method :" + method +"<br />");
+		out.println("query :" + query +"<br />");
+		out.println("uri :" + uri +"<br />");
+		out.println("url :" + url +"<br />");
 	}
 
+//	URI = Uniform Resource Identifier : 인터넷에 있는 자원을 나타내는 유일한 장소
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 

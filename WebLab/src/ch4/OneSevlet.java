@@ -1,4 +1,4 @@
-package ch2;
+package ch4;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class HelloServlet
+ * Servlet implementation class OneSevlet
  */
-@WebServlet("/HelloServlet")
-public class HelloServlet extends HttpServlet {
+@WebServlet("/OneSevlet")
+public class OneSevlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public HelloServlet() {
+    public OneSevlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,23 +28,26 @@ public class HelloServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("EUC-KR");
-		response.setContentType("text/html;charset=EUC-KR");
 		PrintWriter out = response.getWriter();
-		out.print("<html>");
-		out.print("<head>");
-		out.print("<title>helloworld servlet</title>");
-		out.print("</head>");
-		out.print("<body>");
-		out.print("<h1>HelloWorld</h1>");
-		out.print("</body>");
-		out.print("</html>");
+		out.println("<h1>I am One Servlet</h1>");
+		
+		response.sendRedirect("TowServlet");
+		//설명 : http://localhost:8090/WebLab/TwoServlet
+		
+		//RequestDispatcher rd = request.getRequestDispatcher("TwoServlet");
+		//rd.foward(request, response);
+		//설명 : http://localhost:8090/WebLab/TwoServlet
+		
+		//RequestDispatcher rd = request.getRequestDispatcher("TwoServlet");
+		//rd.include(request, response);
+		//설명 : http://localhost:8090/WebLab/TwoServlet
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 
