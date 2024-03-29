@@ -240,7 +240,7 @@
 			<div class="noticeList fl">
 				<div id="noticeHeading" class="cf">
 					<h2>알려드립니다</h2>
-					<a href="board/board.html"><span calss="showBalloon" title="공지사항 목록보기">목록보기</span></a>
+					<a href="/Project03/board/board.jsp"><span calss="showBalloon" title="공지사항 목록보기">목록보기</span></a>
 				</div><!-- id="noticeHeading" -->
 				<ul>
 					<li><a href="#" tabindex="90">국내선 유류할증료 (2024년 3월)<span>2024.02.05</span></a></li>
