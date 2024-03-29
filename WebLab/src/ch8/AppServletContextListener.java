@@ -22,14 +22,14 @@ public class AppServletContextListener implements ServletContextListener {
      * @see ServletContextListener#contextDestroyed(ServletContextEvent)
      */
     public void contextDestroyed(ServletContextEvent sce)  { 
-         System.out.println("application ÀÌ Á¾·áµÇ¾ú½À´Ï´Ù.");
+         System.out.println("application ì´ ì¢…ë£Œë˜ì—ˆìŠµë‹ˆë‹¤.");
     }
 
 	/**
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
     public void contextInitialized(ServletContextEvent sce)  { 
-    	System.out.println("application ÀÌ ½ÇÇàµÇ¾ú½À´Ï´Ù.");
+    	System.out.println("application ì´ ì‹¤í–‰ë˜ì—ˆìŠµë‹ˆë‹¤.");
     }
 	
 }

@@ -12,7 +12,7 @@ import javax.servlet.annotation.WebFilter;
 /**
  * Servlet Filter implementation class OneFilter
  */
-@WebFilter("/*")
+@WebFilter("/bb")
 public class OneFilter implements Filter {
 
     /**
