@@ -1,35 +1,26 @@
-package ch6;
+package ch16;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class MyServlet
+ * Servlet implementation class MvcControl
  */
-@WebServlet(
-	urlPatterns = {
-		"/url1",	
-		"/url2"	
-	},
-	initParams = {
-		@WebInitParam(name="param1", value="param1.data"),	
-		@WebInitParam(name="param2", value="param2.data")	
-	}
-)
-public class MyServlet extends HttpServlet {
+@WebServlet("/control.do")
+public class MvcControl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MyServlet() {
+    public MvcControl() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -38,23 +29,32 @@ public class MyServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//String data = null;
-		//data.indexOf(0);
-		
-		PrintWriter out = response.getWriter();
-		out.println("<h1>param test</h1>");
-		String param1 = getInitParameter("param1");
-		String param2 = getInitParameter("param2");
-		out.println("param : " +param1+", "+param2);
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		String id = request.getParameter("id");
+		String pw = request.getParameter("password");
+		
+		ModelBeans beans = new ModelBeans();
+		beans.setId(id);
+		beans.setPassword(pw);
+		
+		HttpSession session = request.getSession();
+		session.setAttribute("login", beans);
+		
+		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/ch16/mvcView.jsp");
+		dispatcher.forward(request, response);
+		
+		
+		
+		
+		
+		
 	}
-	//결론 : web.xml 파일에 등록 또는 Annotation으로 Servlet으로 등록해 사용가능
 
 }

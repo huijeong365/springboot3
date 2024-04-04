@@ -41,7 +41,7 @@ public class RequestTestServlet extends HttpServlet {
 		out.println("url :" + url +"<br />");
 	}
 
-//	URI = Uniform Resource Identifier : ÀÎÅÍ³İ¿¡ ÀÖ´Â ÀÚ¿øÀ» ³ªÅ¸³»´Â À¯ÀÏÇÑ Àå¼Ò
+//	URI = Uniform Resource Identifier : ì¸í„°ë„·ì— ìˆëŠ” ìì›ì„ ë‚˜íƒ€ë‚´ëŠ” ìœ ì¼í•œ ì£¼ì†Œ
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
