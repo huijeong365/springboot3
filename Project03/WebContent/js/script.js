@@ -1,4 +1,4 @@
-// window.open("popup/popup.html", "", "resizable=no, toolbar=no, width=620px, height=550px")
+window.open("popup/popup.html", "", "resizable=no, toolbar=no, width=620px, height=500px")
 
 $(function(){
 	/* notice banner */
@@ -30,64 +30,41 @@ $(function(){
 		}
 	);
 	timer(); 
-
+	
+	
+	
 	/* airservice 슬라이드 메뉴 */
-	var panel_width=$('.sliderPanel > img').width();
-	
-	$('.sliderText').css('left', -300).each(function(index){
-		$(this).attr('dataIndex',index);
-	});
-	$('.controlButton').each(function(index){
-		$(this).attr('dataIndex',index);
-	}).click(function(){
-		var index = $(this).attr('dataIndex');
-		moveSlider(index);
-	});
-	var stop1;
- 	
-	function timer1(){
-		stop1 = setInterval(function(){
-			randomNumber++;
-			if(randomNumber==size) randomNumber=0;
-			moveSlider(randomNumber);
-		},2000);
-	}; 
-	
-	timer1();
-	$('#airService').hover(
-		function(){
-			clearInterval(stop1);
-		},
-		function(){
-			timer1();
+	window.mySwipe = $('#mySwipe').Swipe({
+		auto: 2000, 
+		continuous : true,
+		stopPropagation: true,
+		callback : function(index, element){
+			$('.touch_bullet .active').attr('src', $('.touch_bullet .active').attr('src').replace('on.png','off.png')).removeClass('active');
+			$('.touch_bullet img').eq(index).attr('src', $('.touch_bullet img').eq(index).attr('src').replace('off.png','on.png')).addClass('active');
 		}
-	);
-	
-	function moveSlider(index){
-		var willMoveLeft = -(index*panel_width);
-		$('.sliderPanel').stop().animate({ left: willMoveLeft }, '200');
-		$('.controlButton[dataIndex='+index+']').addClass('active');
-		$('.controlButton[dataIndex!='+index+']').removeClass('active');
-		$('.sliderText[dataIndex='+index+']').stop().show().animate({left: 0},200);
-		$('.sliderText[dataIndex!='+index+']').stop().hide().animate({left: -300},200);
-		randomNumber = index;
-	};
-	
-	$('.left').click(function(){
-		randomNumber--;
-		if(randomNumber<0){randomNumber=$('.controlButton').size()-1}
-		$('.controlButton').eq(randomNumber).trigger('click');			 
+	}).data('Swipe');
+    
+	/* 비주얼 이전, 다음 버튼 */
+	$('.touch_left_btn a').on('click', function(){
+		mySwipe.prev();
+		return false;
 	});
-	
-	$('.right').click(function(){
-		randomNumber++;
-		if(randomNumber==$('.controlButton').size()){randomNumber=0}
-		$('.controlButton').eq(randomNumber).trigger('click');		
+	$('.touch_right_btn a').on('click', function(){
+		mySwipe.next();
+		return false;
 	});
+		$('.start a').on('click', function(){
+		mySwipe.begin();
+		return false;
+	});
+	$('.stop a').on('click', function(){
+		mySwipe.stop();
+		return false;
+	});
+
 	
- 	var size = $('.sliderText').size();
-	var randomNumber = Math.round(Math.random()*(size-1));
-	moveSlider(randomNumber);
+	
+	
 	
 
 
@@ -158,6 +135,28 @@ $(function(){
 		return false;
 	});
 
+	/* 가이드 배너 */
+	 var swiper = new Swiper('.mainGuide', {
+      slidesPerView: 3,
+	  autoplay : true,
+	  continuous : true,
+	  loop: true,
+      direction: getDirection(),
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+      
+    });
+
+    function getDirection() {
+      var windowWidth = window.innerWidth;
+      var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+      return direction;
+    }
+
+	
 
 });
 

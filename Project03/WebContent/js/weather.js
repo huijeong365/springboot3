@@ -1,4 +1,4 @@
-﻿$(function(){
+$(function(){
     /* 날씨 (서울)*/
     $.getJSON('http://api.openweathermap.org/data/2.5/weather?id=1835848&appid=eb57196cf4ecd600ea40fe1ab4bd682e&units=metric', function(data){
 				

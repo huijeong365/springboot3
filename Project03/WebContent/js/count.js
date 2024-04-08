@@ -22,16 +22,16 @@
 	
 	function ddaycount(){
 		imgArr = [
-			'images/num0.gif',
-			'images/num1.gif',
-			'images/num2.gif',
-			'images/num3.gif',
-			'images/num4.gif',
-			'images/num5.gif',
-			'images/num6.gif',
-			'images/num7.gif',
-			'images/num8.gif',
-			'images/num9.gif'
+			'images/num0.png',
+			'images/num1.png',
+			'images/num2.png',
+			'images/num3.png',
+			'images/num4.png',
+			'images/num5.png',
+			'images/num6.png',
+			'images/num7.png',
+			'images/num8.png',
+			'images/num9.png'
 		]
 		
 		doomsday = new Date('May 30, 2024 00:00:00')

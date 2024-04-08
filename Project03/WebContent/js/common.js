@@ -46,6 +46,7 @@ $(function(){
 		$('#quick_menu').stop().animate({top:scv+defaultTop+'px'}, 1000);
 	});
 	$('#quick_menu').css({top:'645px'},1000);
+	
 
 
 	/* 전체메뉴 */

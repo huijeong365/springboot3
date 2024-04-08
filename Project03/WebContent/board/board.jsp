@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="css/board.css">
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="js/script.js"></script>
+	<script src="../js/common.js"></script>
 </head>
 <body>
 	

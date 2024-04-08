@@ -234,7 +234,7 @@
 					<li class="fifthMenu showBalloon" title="전체메뉴"><a href="#"><img src="/Project03/images/menubtn.png" alt="전체메뉴"></a>
 						<div class="twoDepthWrap">
 							<div class="twoDepthMenu cf">
-								<div class="firstSection">
+								<div class="firstSection cf">
 									<h2>예약</h2>
 									<dl>
 										<dt>예약 가이드</dt>
@@ -271,7 +271,7 @@
 										</dd>	
 									</dl>
 								</div>
-								<div class="secondSection">
+								<div class="secondSection cf">
 									<h2>공항</h2>
 									<dl>
 										<dt>체크인</dt>
@@ -333,6 +333,85 @@
 											<ul>
 												<li><a href="#">엑설런트 보딩패스</a></li>
 												<li><a href="#">엑설런트 트랜짓 프로그램</a></li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+								
+								<div class="thirdSection cf">
+									<h2>기내</h2>
+									<dl>
+										<dt>클래스별 서비스</dt>
+										<dd>
+											<ul>
+												<li><a href="#">일등석</a></li>
+												<li><a href="#">프레스티지석</a></li>
+												<li><a href="#">일반석</a></li>
+											</ul>
+										</dd>
+									</dl>
+									<dl>
+										<dt>기내 서비스</dt>
+										<dd>
+											<ul>
+												<li><a href="#">서비스 순서</a></li>
+												<li><a href="#">기내식</a></li>
+												<li><a href="#">기내 면세품</a></li>
+												<li><a href="#">기내 여행 가이드</a></li>
+												<li><a href="#">기내 엔터테인먼트</a></li>
+												<li><a href="#">기내 와이파이</a></li>
+											</ul>
+										</dd>
+									</dl>
+									<dl>
+										<dt>항공기 안내</dt>
+										<dd>
+											<ul>
+												<li><a href="#">보잉 787</a></li>
+												<li><a href="#">보잉 777</a></li>
+												<li><a href="#">보잉 747</a></li>
+												<li><a href="#">보잉 737</a></li>
+												<li><a href="#">에어버스 A380</a></li>
+												<li><a href="#">에어버스 A330</a></li>
+												<li><a href="#">에어버스 A321</a></li>
+												<li><a href="#">에어버스 A220</a></li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+								
+								<div class="fourthSection cf">
+									<h2>스카이패스</h2>
+									<dl>
+										<dt>스카이패스 소개</dt>
+										<dd>
+											<ul>
+												<li><a href="#">회원혜택</a></li>
+												<li><a href="#">가족 마일리지</a></li>
+												<li><a href="#">제휴사 할인</a></li>
+												<li><a href="#">스카이팀 공동 혜택</a></li>
+											</ul>
+										</dd>
+									</dl>
+									<dl>
+										<dt>마일리지 적립</dt>
+										<dd>
+											<ul>
+												<li><a href="#">대한항공</a></li>
+												<li><a href="#">신용카드</a></li>
+												<li><a href="#">여행과 라이프</a></li>
+												<li><a href="#">제휴 항공사</a></li>
+												<li><a href="#">탑승 후 적립 안내</a></li>
+											</ul>
+										</dd>
+									</dl>
+									<dl>
+										<dt>마일리지 사용</dt>
+										<dd>
+											<ul>
+												<li><a href="#">대한항공 보너스</a></li>
+												<li><a href="#">제휴 항공사 보너스</a></li>
+												<li><a href="#">마일리지 몰</a></li>
 											</ul>
 										</dd>
 									</dl>
