@@ -42,7 +42,7 @@ public class DispatcherServlet extends HttpServlet {
 		//controller에 함수 호출해서 구체적인 행위가 이루어 질 수 있도록 처리
 		String viewPage = ctrl.handlerRequest(request, response);
 		
-		//최종 유저에게  보여줘야 ㅎ되는 view 화면으로 리다이렉트(Redirect)
+		//최종 유저에게  보여줘야 되는 view 화면으로 리다이렉트(Redirect)
 		RequestDispatcher rd = request.getRequestDispatcher(viewPage);
 		rd.forward(request, response);
 	}

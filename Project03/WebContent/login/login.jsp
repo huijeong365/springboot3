@@ -11,12 +11,12 @@
 	<meta name="description" content="대한항공 공식 홈페이지에서 항공편을 예약하고, 세계 100여개 도시를 연결하는 대한항공의 글로벌 네트워크와 특별한 서비스를 경험하세요.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>항공권 예약 및 여행 정보 | 대한항공 | 로그인</title>
-	<link rel="icon" href="images/favicon.ico">
+	<link rel="icon" href="../images/favicon.ico">
 	<link rel="stylesheet" href="../css/common.css">
 	<link rel="stylesheet" href="css/login.css">
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="js/script.js"></script>
-	<script src="../js/common.js"></script>
+	<script src="../js/script.js"></script>
 </head>
 <body>
 	
